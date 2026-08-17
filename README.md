@@ -1,206 +1,555 @@
-# Supply Chain Analysis - Capstone Project
+# 📦 Supply Chain Analysis
 
-The supply chain dataset comprises 24 columns and 100+ rows, containing information on various aspects of 
-the supply chain, including product details, pricing, availability, sales, manufacturing, shipping, and costs. It is 
-designed for analyzing revenue generation, manufacturing expenses, and transportation costs to optimize supply chain 
-operations.
+Welcome to the **Supply Chain Analysis** project by **Aryan Ghosh**!
 
-# Problem Statement
+This project is an end-to-end **Data Analytics and Business Intelligence case study** focused on analyzing supply chain operations across product sales, inventory, manufacturing, suppliers, transportation, shipping, and product quality.
 
-The supply chain dataset presents a comprehensive set of information related to product sales, 
-manufacturing, and logistics. The challenge is to extract meaningful insights and actionable recommendations from the data to 
-optimize supply chain operations and improve profitability.
+Using **Python, MySQL, Excel, and Power BI**, the project transforms raw supply chain data into meaningful business insights and actionable recommendations aimed at improving operational efficiency, reducing costs, and increasing profitability.
 
-## 🛠 Tools Used
+---
 
-Tools used: Python (library: Seaborn, Matplotlib, Pandas, and Numpy)
+## 📌 Objective
 
-MySQL
+The primary objective of this project is to analyze supply chain data and identify opportunities to improve:
 
-Excel
+* 💰 Revenue and profitability
+* 📦 Inventory and stock management
+* 🏭 Manufacturing efficiency
+* 🚚 Transportation and shipping performance
+* 🤝 Supplier performance
+* ❌ Product quality and defect rates
+* 📍 Regional sales performance
+* ⏱️ Lead times and delivery efficiency
 
-Power BI
+The project simulates a real-world analytics workflow where raw operational data is transformed into **business-focused insights for decision-making**.
 
+---
 
+# 🧰 Tools & Technologies Used
 
+| Tool           | Purpose                                                                           |
+| -------------- | --------------------------------------------------------------------------------- |
+| **Python**     | Data cleaning, exploratory data analysis, statistical analysis, and visualization |
+| **Pandas**     | Data manipulation and preprocessing                                               |
+| **NumPy**      | Numerical analysis and calculations                                               |
+| **Matplotlib** | Data visualization                                                                |
+| **Seaborn**    | Statistical visualization                                                         |
+| **MySQL**      | Data querying, aggregation, KPI calculation, and business analysis                |
+| **Excel**      | Data analysis, pivot tables, dashboarding, and KPI validation                     |
+| **Power BI**   | Interactive dashboard development and business intelligence                       |
 
-## Documentation
+---
 
-## Python Analysis:- 
+# 📂 Dataset Summary
 
-### Table of Contents:
+The supply chain dataset contains **24 columns and 100+ records** covering different aspects of supply chain operations.
 
-1️⃣ Load Dataset
+### Key Areas Covered
 
-2️⃣ Import Libraries
+* 🛒 Product information
+* 💰 Product pricing
+* 📈 Sales and revenue
+* 📦 Product availability
+* 🏭 Manufacturing costs
+* ⏱️ Manufacturing lead times
+* 📋 Order quantities
+* 📊 Production volumes
+* ❌ Inspection and defect rates
+* 🚚 Shipping costs
+* 🛳️ Transportation modes
+* 📍 Routes and locations
+* 🚛 Shipping carriers
+* 🤝 Supplier information
+* 👥 Customer demographics
 
-3️⃣ Exploratory Data Analysis
+The dataset enables analysis of **revenue generation, manufacturing expenses, inventory levels, transportation costs, supplier performance, and product quality**.
 
-4️⃣ Checking Null Values and Cleaning Data
+---
 
-5️⃣ Visualization :
+# 🔍 Exploratory Data Analysis — Python
 
-### Sales Analysis:
+Python was used for the initial exploration and preparation of the dataset.
 
-1️⃣ Analyze the number of products sold and revenue generated to understand sales performance over time.
+## Key Activities
 
-2️⃣ Identify customer demographics to determine which groups are purchasing the most products.
+### 1. Dataset Loading
 
-3️⃣ Track availability and stock levels to ensure the right products are in stock when customers are ready to buy.
+* Loaded the supply chain dataset
+* Examined the structure and dimensions of the dataset
+* Reviewed available columns and data types
 
-### Operational Analysis:
+### 2. Data Cleaning
 
-1️⃣ Analyze lead times, order quantities, and production volumes to optimize inventory management and reduce stockouts.
+* Checked for missing values
+* Identified duplicate records
+* Validated data types
+* Prepared the dataset for further analysis
 
-2️⃣ Track manufacturing lead times and costs to identify areas for improvement and cost savings.
+### 3. Exploratory Data Analysis
 
-3️⃣ Monitor inspection results and defect rates to identify quality issues and improve manufacturing processes.
+Performed descriptive and grouped analysis to understand:
 
-### Shipping Analysis:
+* Sales performance
+* Product distribution
+* Revenue generation
+* Customer demographics
+* Product availability
+* Inventory levels
+* Manufacturing performance
+* Shipping performance
+* Product quality
 
-1️⃣ Analyze costs, transportation modes, and routes to optimize logistics and reduce shipping costs.
+### 4. Data Visualization
 
-2️⃣ Monitor shipping times, shipping carriers, and modes of transportation to ensure timely delivery to customers.
+Used **Matplotlib and Seaborn** to identify trends, relationships, and patterns across the supply chain.
 
-3️⃣ Track shipping costs associated with shipping carriers and revenue generated to identify areas for cost savings.
+---
 
-### Libraries Used for the Analysis:
+# 📊 Sales Analysis
 
-Data Manipulation: NumPy, Pandas
+The sales analysis focuses on understanding product demand, revenue generation, and customer purchasing patterns.
 
-Data Visualization: Seaborn, Matplotlib
+### Key Analysis
 
-Mysql Analysis:-
-----------------
+* Analyzed products sold and revenue generated
+* Compared sales performance across product categories
+* Examined customer demographics
+* Evaluated product availability and stock levels
+* Identified high-demand product categories
 
-I used MySQL to analyze supply chain data and answer specific questions.
+### Business Objective
 
-📊 Total Revenue by Product Type:
-Calculate the total revenue generated by each product type. This can help identify the most profitable products.
+The analysis helps determine which products contribute most to revenue and where inventory and marketing efforts can be prioritized.
 
-🚚 Shipping Costs by Carrier:
-Calculate the average shipping costs for each shipping carrier to evaluate which carrier is the most cost-effective.
+---
 
-⏳ Lead Times by Supplier:
-Calculate average lead times for each supplier to assess their reliability in delivering products on time.
+# ⚙️ Operational Analysis
 
-🌍 Total Products Sold by Location:
-Determine the total number of products sold in each location to understand regional demand.
+The operational analysis focuses on manufacturing and inventory efficiency.
 
-🔍 Defect Rates by Inspection Results:
-Calculate defect rates for different inspection results to assess product quality.
+### Key Analysis
 
-💰 Ranking Products by Profitability:
-Write a query to rank products based on profitability, where profitability is calculated as (revenue generated - manufacturing costs - shipping costs).
+* Analyzed lead times
+* Examined order quantities
+* Evaluated production volumes
+* Compared manufacturing costs
+* Analyzed inventory availability
+* Examined inspection results and defect rates
 
-📦 Supplier Performance Analysis:
-Calculate the average lead time for each supplier and identify suppliers with lead times higher than the overall average.
+### Business Objective
 
-🏆 Top 5 Shipping Carriers by Cost Efficiency:
-Determine the top 5 shipping carriers with the lowest average shipping costs per product shipped.
+The objective is to identify operational bottlenecks, reduce unnecessary costs, improve inventory planning, and minimize product quality issues.
 
-Excel Analysis:-
-----------------
-![Excel](https://github.com/Harpreetk01/sample/assets/122088124/2a9ae76d-b8b3-45d8-918c-f4a3500159f3)
+---
 
-Excel Analysis Summary for Supply Chain Capstone Project
+# 🚚 Shipping & Logistics Analysis
 
-Create an Excel dashboard for your supply chain capstone project and visualize key insights from your supply chain dataset.
+The shipping analysis evaluates the efficiency and cost of different logistics options.
 
-📊 Visualizing Key Insights
+### Key Analysis
 
-From the overall analysis, I have discovered some key insights:
+* Compared shipping costs across carriers
+* Analyzed transportation modes
+* Evaluated shipping routes
+* Compared shipping times
+* Analyzed carrier performance
+* Examined transportation costs against revenue
 
-💰 Skincare products are the most profitable, generating significant revenue. Haircare products come next in popularity, followed by cosmetics.
+### Business Objective
 
-🚚 Carrier C has the highest shipping costs on average, with carrier A as the second-costliest option. Carrier B, on the other hand, is the most affordable choice.
+The analysis helps identify cost-effective transportation methods and shipping carriers while maintaining efficient delivery times.
 
-🛳️ Among the four transportation modes (air, rail, road, and sea), air transportation is associated with higher shipping costs, while sea transportation offers a more economical solution.
+---
 
-📈 The top locations for product sales are Kolkata and Delhi, closely followed by Mumbai and Chennai, each with a substantial number of products sold. In contrast, Bangalore reports the lowest number of products sold.
+# 🗄️ MySQL Analysis
 
-❌ Among the three types of products, haircare exhibits the highest defect rate at 37%, followed by skincare and cosmetics.
+MySQL was used to perform structured business analysis and answer specific supply chain questions.
 
-💼 The manufacturing cost of skincare products is higher than that of haircare and cosmetics.
+## 📊 Total Revenue by Product Type
 
-This Excel dashboard provides a concise overview of the supply chain dataset, making it easier to understand and make data-driven decisions.
+Calculated total revenue generated by each product category to identify the major revenue contributors.
 
+---
 
-Power BI:-
------------
+## 🚚 Shipping Costs by Carrier
 
-![Power BI - Dashboard](https://github.com/Harpreetk01/sample/assets/122088124/80e7f912-4c2d-4e82-b00b-d41a832b1e7a)
+Calculated the average shipping cost for each shipping carrier to compare their cost efficiency.
 
-In Powe Bi, build charts, graphs, and KPIs to visualize the data and understand it more interactively, along with 
-that, build some slicers to make it more user-friendly to customize the charts and graphs.
+---
 
-Build some cards to understand some key performance indicators, including:
+## ⏳ Lead Times by Supplier
 
-### Key Performance Indicators (KPIs):
+Calculated the average lead time for each supplier to evaluate supplier reliability and operational efficiency.
 
-1️⃣ Total Revenue: 577,000
+---
 
-2️⃣ Average Product Price: 49.46
+## 🌍 Total Products Sold by Location
 
-3️⃣ Total Products Sold: 46,000
+Analyzed the total number of products sold across different locations to identify regional demand patterns.
 
-4️⃣ Manufacturing Cost: 47.27
+---
 
-5️⃣ Total Available Products: 4,840
+## 🔍 Defect Rates by Inspection Results
 
-6️⃣ Total Stock Value: 4,777
+Analyzed defect rates across different inspection outcomes to identify product quality issues.
 
-### Charts and Graphs:
+---
 
-1. Average Defect Rate, Manufacturing Lead Time, and Manufacturing Cost by Product
+## 💰 Product Profitability Ranking
 
-2. Customer Demographics vs. Number of Products Sold by Product Type
+Ranked products based on profitability using:
 
-3. Total Revenue Generated by Product Type and Total Products Sold by Product Type
+**Profitability = Revenue Generated − Manufacturing Cost − Shipping Cost**
 
-4. Average Manufacturing Cost vs. Average Price by Product Type
+This helps identify products that contribute most to overall profitability.
 
-5. Transportation Modes vs. Routes with Average Cost
+---
 
-6. Defect Rate vs. Inspection Rate by Product Type
+## 📦 Supplier Performance Analysis
 
-7. Transportation Modes and Shipping Carriers with Average Shipping Time
+Compared supplier-level average lead times against the overall average lead time to identify suppliers requiring operational attention.
 
-### Interactive Slicers:
+---
 
-Product Type
+## 🏆 Top 5 Shipping Carriers by Cost Efficiency
 
-Transportation Mode
+Identified the five shipping carriers with the lowest average shipping cost per product shipped.
 
-Shipping Carrier
+This analysis helps support data-driven logistics and carrier-selection decisions.
 
-Routes
+---
 
-Suppliers' Name
-## Insights
-1. The highest number of products sold among the three product categories is skincare, which accounts for 45% of the business. Haircare follows at 29%, and cosmetics contribute 25% to the revenue.
+# 📈 Excel Analysis
 
-2. Analyzing customer demographics versus the number of products sold by product type reveals that the female group purchases higher-quality skincare and cosmetic products, while the male group opts for products of roughly equal quality in terms of haircare and cosmetics. 
+Excel was used for data validation, exploratory analysis, KPI calculations, and dashboard development.
 
-An unknown group category purchases a higher quantity of all three product types. Skincare products are the most popular among all four product categories, indicating a high demand.
+### Key Activities
 
-3. Analyzing product availability and stock levels shows that the company maintains an equal quantity of inventory for haircare and skincare products, with slightly less stock for cosmetics.
-Skincare products exhibit higher availability and lower stock levels, enabling quick manufacturing and shipment. 
+* Data validation
+* Pivot table analysis
+* KPI calculations
+* Product-level analysis
+* Carrier comparison
+* Transportation analysis
+* Sales analysis
+* Defect-rate analysis
+* Inventory analysis
 
-In contrast, cosmetics and haircare have higher stock levels and lower availability, meaning the company faces challenges in promptly shipping these products due to longer manufacturing times.
+---
 
-4. Skincare products have higher order quantities and longer lead times, often associated with higher production volumes. 
+# 📊 Excel Dashboard
 
+The Excel dashboard provides a consolidated view of important supply chain metrics and performance indicators.
 
-Higher production volumes necessitate longer lead times to ensure adequate time for manufacturing products to meet customer demand.
+### Key Insights
 
- Haircare products also exhibit longer lead times and higher production volumes, possibly due to the need for more specialized ingredients or manufacturing processes.
+* 🧴 **Skincare** products generate the highest revenue and are the most profitable category.
+* 💇 **Haircare** follows skincare in terms of overall performance.
+* 💄 **Cosmetics** contribute comparatively lower revenue.
+* 🚚 **Carrier C** has the highest average shipping cost.
+* 🚛 **Carrier B** is the most cost-effective shipping carrier based on average shipping cost.
+* 🛳️ **Air transportation** has comparatively higher shipping costs.
+* 🌊 **Sea transportation** provides a more economical transportation option.
+* 📍 **Kolkata and Delhi** record the highest product sales among the analyzed locations.
+* 📍 **Bangalore** records the lowest number of products sold.
+* ❌ **Haircare** has the highest reported defect rate at approximately **37%**.
+* 🏭 **Skincare** has the highest manufacturing cost among the analyzed product categories.
 
-5. All product categories show a higher defect rate.
+---
 
-6. An analysis of revenue generated by shipping carriers indicates that shipping carrier B is costlier but generates higher revenue.
+# 📊 Power BI Dashboard
 
-7. According to the graph, the fastest and most efficient shipping option is Carrier B, and the most efficient transportation mode is road in all four transportation modes.
-## Links
+The Power BI dashboard was developed to provide an interactive view of supply chain performance.
 
-[Power Bi Dashbaord](https://app.powerbi.com/view?r=eyJrIjoiYzgzMTQ1YjItMmIwZC00MTBmLWJiOTUtYzZlNTFmNzYyMzA2IiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9)
+The dashboard combines **KPIs, charts, graphs, and slicers** to allow users to explore the data dynamically.
+
+---
+
+## 🎯 Key Performance Indicators
+
+The dashboard includes the following KPIs:
+
+| KPI                         |   Value |
+| --------------------------- | ------: |
+| 💰 Total Revenue            | 577,000 |
+| 💵 Average Product Price    |   49.46 |
+| 📦 Total Products Sold      |  46,000 |
+| 🏭 Manufacturing Cost       |   47.27 |
+| 📦 Total Available Products |   4,840 |
+| 💼 Total Stock Value        |   4,777 |
+
+---
+
+# 📈 Power BI Visualizations
+
+The dashboard contains the following major visualizations:
+
+### 1. Product Performance
+
+**Average Defect Rate, Manufacturing Lead Time, and Manufacturing Cost by Product**
+
+Used to compare product categories across operational and quality metrics.
+
+---
+
+### 2. Customer Demographics Analysis
+
+**Customer Demographics vs. Number of Products Sold by Product Type**
+
+Used to understand purchasing behavior across customer groups.
+
+---
+
+### 3. Revenue & Sales Analysis
+
+**Total Revenue Generated by Product Type vs. Total Products Sold**
+
+Used to compare sales volume with revenue contribution.
+
+---
+
+### 4. Price vs. Manufacturing Cost
+
+**Average Manufacturing Cost vs. Average Price by Product Type**
+
+Used to understand the relationship between product pricing and production expenses.
+
+---
+
+### 5. Transportation Analysis
+
+**Transportation Modes vs. Routes with Average Cost**
+
+Used to evaluate logistics costs across different transportation modes and routes.
+
+---
+
+### 6. Quality Analysis
+
+**Defect Rate vs. Inspection Rate by Product Type**
+
+Used to identify product categories with potential quality-control issues.
+
+---
+
+### 7. Shipping Efficiency
+
+**Transportation Modes and Shipping Carriers with Average Shipping Time**
+
+Used to compare shipping efficiency across carriers and transportation methods.
+
+---
+
+# 🎛️ Interactive Power BI Slicers
+
+The dashboard includes interactive slicers for:
+
+* Product Type
+* Transportation Mode
+* Shipping Carrier
+* Routes
+* Supplier Name
+
+These slicers allow users to dynamically filter the dashboard and perform deeper analysis.
+
+---
+
+# 💡 Key Business Insights
+
+## 1. Product Category Performance
+
+Skincare records the highest number of products sold and contributes approximately **45% of the business**, followed by:
+
+* Haircare — **29%**
+* Cosmetics — **25%**
+
+This indicates strong demand for skincare products and highlights the importance of maintaining adequate inventory for this category.
+
+---
+
+## 2. Customer Demographics
+
+The customer demographic analysis indicates differences in purchasing behavior across product categories.
+
+Female customers show stronger purchasing activity for skincare and cosmetics, while male customers show relatively balanced demand across haircare and cosmetics.
+
+The unknown demographic group also represents a significant volume of purchases across product categories.
+
+Overall, **skincare remains the strongest-performing category across customer groups**.
+
+---
+
+## 3. Inventory & Availability
+
+The analysis indicates that haircare and skincare maintain relatively similar inventory quantities, while cosmetics maintain slightly lower stock levels.
+
+Skincare shows stronger product availability, supporting faster fulfillment and shipment.
+
+Haircare and cosmetics show comparatively higher stock levels combined with lower availability, suggesting potential opportunities to improve inventory planning and operational efficiency.
+
+---
+
+## 4. Manufacturing & Lead Times
+
+Skincare products have relatively high order quantities and longer lead times, which may be associated with higher production requirements.
+
+Haircare products also demonstrate relatively high production volumes and longer lead times.
+
+This highlights the importance of aligning production planning with expected demand to avoid delays and inventory imbalances.
+
+---
+
+## 5. Product Quality
+
+The analysis indicates relatively high defect rates across the product categories.
+
+Haircare records the highest reported defect rate, making it a potential priority area for quality-control improvements.
+
+Reducing defect rates could help decrease production losses and improve overall customer satisfaction.
+
+---
+
+## 6. Shipping Carrier Performance
+
+The analysis of shipping carriers indicates that **Carrier B generates higher revenue despite having comparatively higher shipping costs**.
+
+This suggests that carrier selection should not be based solely on shipping cost; revenue contribution, delivery performance, and operational efficiency should also be considered.
+
+---
+
+## 7. Transportation Efficiency
+
+The analysis indicates that **road transportation** provides strong overall efficiency among the analyzed transportation modes.
+
+Carrier B also demonstrates strong shipping-time performance.
+
+This suggests that combining efficient carriers with appropriate transportation modes could help improve delivery performance while controlling logistics costs.
+
+---
+
+# 🚀 Business Recommendations
+
+Based on the analysis, the following recommendations can be considered:
+
+### 📦 1. Optimize Inventory
+
+Maintain higher availability for high-demand categories such as skincare while reducing unnecessary inventory accumulation in slower-moving categories.
+
+### 🏭 2. Improve Manufacturing Efficiency
+
+Investigate the causes of longer manufacturing lead times and identify opportunities to streamline production processes.
+
+### ❌ 3. Reduce Defect Rates
+
+Prioritize quality-control improvements for haircare products due to their relatively high defect rate.
+
+### 🚚 4. Optimize Carrier Selection
+
+Evaluate shipping carriers using a combination of:
+
+* Shipping cost
+* Delivery time
+* Revenue contribution
+* Reliability
+
+rather than considering shipping cost alone.
+
+### 🌍 5. Focus on High-Demand Locations
+
+Prioritize inventory and distribution planning in high-performing locations such as Kolkata and Delhi while investigating the reasons for lower sales in Bangalore.
+
+### 📈 6. Align Production With Demand
+
+Use historical sales and demand patterns to improve production planning and minimize both stockouts and excess inventory.
+
+---
+
+# 📁 Project Structure
+
+```text
+📦 Supply-Chain-Analysis/
+│
+├── 🐍 Supply Chain Analysis.ipynb
+│
+├── 🗄️ Supply Chain Analysis - MySQL.sql
+│
+├── 📈 Supply Chain Analysis.xlsx
+│
+├── 📊 Supply Chain Analysis.pbix
+│
+└── 📖 README.md
+```
+
+---
+
+# 🎯 Skills Demonstrated
+
+### Data Analytics
+
+* Exploratory Data Analysis
+* Data Cleaning
+* Data Transformation
+* KPI Development
+* Trend Analysis
+* Business Analysis
+* Data Visualization
+* Data Storytelling
+
+### Technical Skills
+
+* Python
+* Pandas
+* NumPy
+* Matplotlib
+* Seaborn
+* MySQL
+* Microsoft Excel
+* Power BI
+* SQL
+
+### Business Skills
+
+* Supply Chain Analytics
+* Revenue Analysis
+* Inventory Analysis
+* Manufacturing Analysis
+* Logistics Optimization
+* Supplier Performance Analysis
+* Cost Analysis
+* Data-Driven Decision Making
+
+---
+
+# 👨‍💻 About Me
+
+**Aryan Ghosh**
+
+🎓 Engineering Student at **NIT Raipur**
+📊 Aspiring **Data Analyst / AI Analyst**
+💡 Interested in **Data Analytics, Business Intelligence, Finance, and Data-Driven Decision Making**
+
+I enjoy working with data to identify patterns, solve business problems, and transform complex datasets into actionable insights.
+
+### Connect With Me
+
+📧 **[aryanghosh010@gmail.com](mailto:aryanghosh010@gmail.com)**
+
+🐙 **GitHub:** `aryan230205`
+
+---
+
+# 🔗 Project Dashboard
+
+### Power BI Dashboard
+
+[View Interactive Power BI Dashboard](https://app.powerbi.com/view?r=eyJrIjoiYzgzMTQ1YjItMmIwZC00MTBmLWJiOTUtYzZlNTFmNzYyMzA2IiwidCI6ImRmODY3OWNkLWE0MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9)
+
+---
+
+# 🙏 Thank You!
+
+Thank you for exploring the **Supply Chain Analysis** project.
+
+This project demonstrates how **Python, SQL, Excel, and Power BI** can be combined to transform raw supply chain data into meaningful business insights and support data-driven operational decisions.
+
+**Built with Python • MySQL • Excel • Power BI**
